@@ -14,7 +14,7 @@ These instructions are for bash but will be similar in powershell or zsh.
   - You can write your own command line script to do this
 
 ## Setup:
-  – These instructions are for bash but powershell / zsh should be similar
+  - These instructions are for bash but powershell / zsh should be similar
   - Make sure your Google Chrome is up-to-date
 
 ## Write the Code
@@ -51,6 +51,8 @@ do
   /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu --dump-dom https://YOURHEROKUSITE1.com
   /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu --dump-dom https://YOURHEROKUSITE2.com
   # add your other heroku projects here by repeating the above line as many times as you want
+  # note that this includes an absolute path that goes inside your Google Chrome application folder
+  # this should work for a Mac but make sure that path is valid
   sleep 1700
 done
 ```
@@ -89,6 +91,12 @@ This will save you dyno hours since you can turn it off during off hours when pe
 ## Problems
 
 If you encounter issues running this Google (or DDG) is your friend. What you are trying to do is open a webpage with a headless browser in the command line and write a while loop in a shell script with a delay or pause. You should be able to get something working in any environment if you pop all of that into a search engine.
+
+* update google chrome
+* check your google chrome path in the script
+* check your project urls
+* check to see if you're running bash or zsh etc
+* get your google on
 
 
 ## Bonus Challanges
