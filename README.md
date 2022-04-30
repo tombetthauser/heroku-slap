@@ -88,7 +88,7 @@ Now let that run for as long as you want to keep your server awake and open a ne
 This will save you dyno hours since you can turn it off during off hours when people are less likely to be checking out your portfolio and will let you remove websites etc so you dont waste free dyno hours on projects that are no longer on your portfolio (someday).
 
 
-## Problems
+## Problems?
 
 If you encounter issues running this remember Google (or DDG) is your friend. What you are trying to do is open a webpage with a headless browser in the command line and write a while loop in a command line script with a 59 minute delay or pause. You should be able to get something working in any environment if you pop all of that into a search engine. Here's a list of stuff to check though for the tldr crowd.
 
@@ -105,4 +105,4 @@ If you encounter issues running this remember Google (or DDG) is your friend. Wh
 2. Figure out how to initiate this script automatically every time you open a new terminal / command prompt instance.
 3. Figure out how to do this with Puppetmaster or Selenium (more powerful browser automation / webscraping tools)
 4. Write your first webscraper for no particular reason!
-5. Write a bash script to automate something repetative!
+5. Write a bash script to automate something repetitive!
