@@ -21,17 +21,17 @@ These instructions are for bash but will be similar in powershell or zsh.
 
 ### 1. Make a Bash File (.sh)
 
-Make a new file anywhere you want on your computer called 'heroku.sh'. You can do this from the command line if you want.
+Make a new file anywhere you want on your computer called heroku.sh. You can do this from the command line if you want.
 
-'''bash
- $ touch heroku.sh
-'''
+```bash
+  $ touch heroku.sh
+```
 
 Note that .sh indicates this is a bash script if you aren't using bash. 
 
 ### 2. Open the File
 
-4. Open that file up so you can write in it. You can do this in an IDE like VSCode but you aren't going to be writing much code so maybe practice opening it in a command line text editor just for fun like 'nano', 'vim' or 'emacs'.
+4. Open that file up so you can write in it. You can do this in an IDE like VSCode but you aren't going to be writing much code so maybe practice opening it in a command line text editor just for fun like nano, vim or emacs.
 
 ```bash
 $ nano heroku.sh
@@ -45,18 +45,21 @@ You can paste this code into your bash file but you might learn more by typing i
 
 Basically this is shell script (specifically bash syntax), meaning it could all be typed directly in your command line and would be valid syntax. We can put shell script into files though to save the trouble of typing things like this out repeatedly or to help if the commands form more complex multi-line scripts.
 
-'''bash
+```bash
 while true
 do
   /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu --dump-dom https://YOURHEROKUSITE1.com
   /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu --dump-dom https://YOURHEROKUSITE2.com
+  # add your other heroku projects here by repeating the above line as many times as you want
   sleep 1700
 done
-'''
+```
 
-Lets break that all down quickly.
+Lets break that all down quickly. Remember the the syntax / language here is bash script.
 
-'''bash
+This part (below 👇) just sets up an infinite while loop with a 59 minute (1740 second) pause before repeating the loop.
+
+```bash
 while true
 do
   # ...
@@ -64,10 +67,32 @@ do
 done
 ```
 
-👆 This just sets up an infinite while loop with a 59 minute (1740 second) pause before repeating the loop.
+This part (below 👇) uses your Chrome browser in headless mode (meaning no visual browser interface) and requests the DOM information. Thereby waking up the server and keeping it awake for the next hour on heroku's end.
 
 ```bash
   /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --headless --disable-gpu --dump-dom https://YOURHEROKUSITE1.com
 ```
 
-👆 This uses your Chrome browser in headless mode (meaning no visual browser interface) and requests the DOM information. Thereby waking up the server.
+## Using Your New Shell Script
+
+Now all you need to do is let this run in it's own terminal window forever. Or realistically just let it run whenever you have your computer on. For bash users you can run by putting this directly in your command line and pressing enter.
+
+```bash
+$ bash heroku.sh
+```
+
+Now let that run for as long as you want to keep your server awake and open a new command line window or tab for your other tasks.
+
+This will save you dyno hours since you can turn it off during off hours when people are less likely to be checking out your portfolio and will let you remove websites etc so you dont waste free dyno hours on projects that are no longer on your portfolio (someday).
+
+
+## Problems
+
+If you encounter issues running this Google (or DDG) is your friend. What you are trying to do is open a webpage with a headless browser in the command line and write a while loop in a shell script with a delay or pause. You should be able to get something working in any environment if you pop all of that into a search engine.
+
+
+## Bonus Challanges
+
+1. Figure out how to get this script to run in the background (as a daemon) so you dont have to take up a terminal window looking at it.
+2. Figure out how to initiate this script every time you open a new terminal / command prompt.
+3. Figure out how to do this with Puppetmaster or Selenium (more powerful browser automation / webscraping tools)
