@@ -12,6 +12,7 @@ These instructions are for bash but will be similar in powershell or zsh.
   - Heroku servers go to sleep every hour
   - There are semi-sketchy services that keep them awake for you
   - You can write your own command line script to do this
+  - Put [this code](#write-that-code) in a bash script file and run it
 
 ## Setup:
   - These instructions are for bash but powershell / zsh should be similar
@@ -19,7 +20,7 @@ These instructions are for bash but will be similar in powershell or zsh.
 
 ## Write the Code
 
-### 1. Make a Bash File (.sh)
+### Make a Bash File (.sh)
 
 Make a new file anywhere you want on your computer called heroku.sh. You can do this from the command line if you want.
 
@@ -29,7 +30,7 @@ Make a new file anywhere you want on your computer called heroku.sh. You can do 
 
 Note that .sh indicates this is a bash script if you aren't using bash. 
 
-### 2. Open the File
+### Open the File
 
 4. Open that file up so you can write in it. You can do this in an IDE like VSCode but you aren't going to be writing much code so maybe practice opening it in a command line text editor just for fun like nano, vim or emacs.
 
@@ -39,7 +40,7 @@ $ nano heroku.sh
 
 sidenote: this actually makes a new file if it doesn't exist so you could just skip the previous step technically.
 
-### 3. Write that Code
+### Write that Code
 
 You can paste this code into your bash file but you might learn more by typing it out. 
 
