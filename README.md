@@ -77,7 +77,7 @@ This part (below 👇) uses your Chrome browser in headless mode (meaning no vis
 
 ## Using Your New Shell Script
 
-Now all you need to do is let this run in it's own terminal window forever. Or realistically just let it run whenever you have your computer on. For bash users you can run by putting this directly in your command line and pressing enter.
+Now all you need to do is let this run in it's own terminal window forever. Or realistically just let it run whenever you have your computer on. For bash users you can run it by typing this directly in your command line and pressing enter. This uses the bash utility to run a bash script written in a .sh file.
 
 ```bash
 $ bash heroku.sh
@@ -90,17 +90,19 @@ This will save you dyno hours since you can turn it off during off hours when pe
 
 ## Problems
 
-If you encounter issues running this Google (or DDG) is your friend. What you are trying to do is open a webpage with a headless browser in the command line and write a while loop in a shell script with a delay or pause. You should be able to get something working in any environment if you pop all of that into a search engine.
+If you encounter issues running this remember Google (or DDG) is your friend. What you are trying to do is open a webpage with a headless browser in the command line and write a while loop in a command line script with a 59 minute delay or pause. You should be able to get something working in any environment if you pop all of that into a search engine. Here's a list of stuff to check though for the tldr crowd.
 
 * update google chrome
 * check your google chrome path in the script
 * check your project urls
 * check to see if you're running bash or zsh etc
-* get your google on
+* get your google / ddg on
 
 
 ## Bonus Challanges
 
 1. Figure out how to get this script to run in the background (as a daemon) so you dont have to take up a terminal window looking at it.
-2. Figure out how to initiate this script every time you open a new terminal / command prompt.
+2. Figure out how to initiate this script automatically every time you open a new terminal / command prompt instance.
 3. Figure out how to do this with Puppetmaster or Selenium (more powerful browser automation / webscraping tools)
+4. Write your first webscraper for no particular reason!
+5. Write a bash script to automate something repetative!
