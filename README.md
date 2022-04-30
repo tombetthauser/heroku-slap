@@ -1,4 +1,4 @@
-# Heroku Slap
+# Automate Waking Up Your Heroku Server
 
 Free heroku servers like to go to sleep every 60 minutes unless you pay them money (how dare they). This can be annoying because projects will take a while to wake up if no ones been there in a while and this can look less than great to recruiters etc. You know all this.
 
